@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Iris Predict App</title>
+<body>
+  <div id="wrapper">
+    {% for message in form.SepalLength.errors %}
+      <div>{{message}}</div>
+    {% endfor %}
+
+    {% for message in form.SepalWidth.errors %}
+      <div>{{message}}</div>
+    {% endfor %}
+
+    {% for message in form.PetalLength.errors %}
+      <div>{{message}}</div>
+    {% endfor %}
+
+    {% for message in form.PetalWidth.errors %}
+      <div>{{message}}</div>
+    {% endfor %}
+
+    <form method="post">
+      {{form.SepalLength.label}}<br>
+      {{form.SepalLength}}
+      <br>
+      {{form.SepalWidth.label}}<br>
+      {{form.SepalWidth}}
+      <br>
+      {{form.PetalLength.label}}<br>
+      {{form.PetalLength}}
+      <br>
+      {{form.PetalWidth.label}}<br>
+      {{form.PetalWidth}}
+      <br>
+      {{form.submit}}
+    </form>
+  </div>
+</body>
+</html>
